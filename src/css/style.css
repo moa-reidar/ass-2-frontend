@@ -1,0 +1,80 @@
+body {
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    font-family: var(--font-family-new);
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: var(--font-size-title);
+}
+
+form {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: var(--font-size-question);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: var(--font-family-regular);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: var(--font-family-bold);
+}
+

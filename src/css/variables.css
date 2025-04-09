@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #007BFF;
+    --primary-color-hover: #0056b3;
+    --secondary-color: #e0e0e0;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --success-color: green;
+    --error-color: red;
+
+    --font-family-regular: "Roboto", sans-serif;
+    --font-family-bold: "Roboto Bold", sans-serif;
+    --font-family-new: "Oswald", sans-serif;
+
+    --font-size-base: 16px;
+    --font-size-title: 24px;
+    --font-size-quiz-title: 20px;
+    --font-size-question: 18px;
+
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
