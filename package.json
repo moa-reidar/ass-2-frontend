@@ -1,0 +1,20 @@
+{
+  "name": "pharmacy-inventory",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moa-reidar/ass-2-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moa-reidar/ass-2-frontend/issues"
+  },
+  "homepage": "https://github.com/moa-reidar/ass-2-frontend#readme",
+  "description": ""
+}
