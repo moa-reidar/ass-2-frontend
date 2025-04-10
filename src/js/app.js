@@ -2,7 +2,7 @@ import { Inventory } from './inventory.js';
 
 const inventory = new Inventory();
 
-// Lager én tabellrad 
+// Lager én tabellrad
 function createTableRow(medicine) {
   const row = document.createElement('tr');
 
@@ -43,6 +43,7 @@ function createTableRow(medicine) {
 // Tegn alle rader i tabellen
 function renderTable() {
   const tbody = document.querySelector('#medicine-table tbody');
+  tbody.innerHTML = ''; // tommer ut først
 
   inventory.getMedicines().forEach(medicine => {
     const row = createTableRow(medicine);
@@ -61,7 +62,8 @@ document.getElementById('medicine-form').addEventListener('submit', (event) => {
 
   inventory.addMedicine(name, manufacturer, expiration, quantity);
   renderTable();
-  
+  event.target.reset(); // tømmer skjemaet
 });
 
+// Kjør ved oppstart
 renderTable();
