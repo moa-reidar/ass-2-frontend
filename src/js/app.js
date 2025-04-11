@@ -27,7 +27,7 @@ function createTableRow(medicine) {
 
   // Rediger-knapp
   const editButton = document.createElement('button');
-  editButton.textContent = 'Rediger';
+  editButton.textContent = 'Edit';
   editButton.classList.add('medicine__edit');
   editButton.setAttribute('data-id', medicine.productId);
 
@@ -42,7 +42,7 @@ function createTableRow(medicine) {
 
   // Slett-knapp
   const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Slett';
+  deleteButton.textContent = 'Delete';
   deleteButton.classList.add('medicine__delete');
   deleteButton.setAttribute('data-id', medicine.productId);
 

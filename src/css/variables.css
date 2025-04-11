@@ -7,9 +7,9 @@
     --success-color: green;
     --error-color: red;
   
-    --font-family-regular: "Roboto", sans-serif;
-    --font-family-bold: "Roboto Bold", sans-serif;
-    --font-family-new: "Oswald", sans-serif;
+    --font-family-regular:"Roboto-Regular";
+    --font-family-bold:"Roboto-Bold";
+    --font-family-new:"Oswald";
   
     --font-size-base: 16px;
     --font-size-title: 24px;
