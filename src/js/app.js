@@ -8,17 +8,22 @@ function createTableRow(medicine) {
 
   const nameCell = document.createElement('td');
   nameCell.textContent = medicine.productName;
+  nameCell.setAttribute('data-label', 'Product Name');
 
   const manufacturerCell = document.createElement('td');
   manufacturerCell.textContent = medicine.manufacturer;
+  manufacturerCell.setAttribute('data-label', 'Manufacturer');
 
   const expirationCell = document.createElement('td');
   expirationCell.textContent = medicine.expirationDate;
+  expirationCell.setAttribute('data-label', 'Expiration Date');
 
   const quantityCell = document.createElement('td');
   quantityCell.textContent = medicine.quantity;
+  quantityCell.setAttribute('data-label', 'Quantity');
 
   const actionCell = document.createElement('td');
+  actionCell.setAttribute('data-label', 'Actions');
 
   // Rediger-knapp
   const editButton = document.createElement('button');
@@ -28,14 +33,10 @@ function createTableRow(medicine) {
 
   editButton.addEventListener('click', () => {
     alert("Du er nå i redigeringsmodus for denne medisinen.");
-
-    // Fyll skjemaet med eksisterende data
     document.getElementById('productName').value = medicine.productName;
     document.getElementById('manufacturer').value = medicine.manufacturer;
     document.getElementById('expirationDate').value = medicine.expirationDate;
     document.getElementById('quantity').value = medicine.quantity;
-
-    // Merk skjemaet med ID-en som redigeres
     document.getElementById('medicine-form').setAttribute('data-edit-id', medicine.productId);
   });
 
@@ -52,7 +53,6 @@ function createTableRow(medicine) {
       renderTable();
     }
   });
-  
 
   actionCell.appendChild(editButton);
   actionCell.appendChild(deleteButton);
@@ -69,8 +69,7 @@ function createTableRow(medicine) {
 // Tegn alle rader i tabellen
 function renderTable() {
   const tbody = document.querySelector('#medicine-table tbody');
-  tbody.innerHTML = ''; // tommer ut først
-
+  tbody.innerHTML = '';
   inventory.getMedicines().forEach(medicine => {
     const row = createTableRow(medicine);
     tbody.appendChild(row);
@@ -90,7 +89,6 @@ document.getElementById('medicine-form').addEventListener('submit', (event) => {
   const editId = form.getAttribute('data-edit-id');
 
   if (editId) {
-    // Rediger eksisterende medisin
     inventory.updateMedicine(Number(editId), {
       productName: name,
       manufacturer: manufacturer,
@@ -99,13 +97,11 @@ document.getElementById('medicine-form').addEventListener('submit', (event) => {
     });
     form.removeAttribute('data-edit-id');
   } else {
-    // Legg til ny medisin
     inventory.addMedicine(name, manufacturer, expiration, quantity);
   }
 
   renderTable();
-  event.target.reset(); // tømmer skjemaet
+  event.target.reset();
 });
 
-// Kjør ved oppstart
 renderTable();

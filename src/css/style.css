@@ -1,134 +1,191 @@
+/* ========== BASE ========== */
 body {
     font-family: var(--font-family-regular);
     font-size: var(--font-size-base);
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--background-color);
-}
-
-header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  header {
     background-color: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
     font-family: var(--font-family-new);
     border-bottom: 1px solid #ddd;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: var(--secondary-color);
     padding: 10px 0;
     text-align: center;
     border-top: 1px solid #ddd;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-}
-
-h1 {
+  }
+  
+  /* ========== TYPOGRAFI ========== */
+  h1 {
     margin-bottom: 20px;
     color: var(--primary-color);
     font-size: var(--font-size-title);
-}
-
-form {
+  }
+  
+  /* ========== FORM ========== */
+  form {
     background: var(--secondary-color);
     padding: 20px;
     border-radius: var(--border-radius);
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
-}
-
-input, button {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  
+  input, button {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
-}
-
-button {
+  }
+  
+  button {
     background-color: var(--primary-color);
     color: white;
     border: none;
     font-size: var(--font-size-question);
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: var(--primary-color-hover);
-}
-
-table {
+  }
+  
+  /* ========== TABLE ========== */
+  table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-th, td {
+  }
+  
+  th, td {
     text-align: left;
     padding: 10px;
     border: 1px solid #ddd;
     font-family: var(--font-family-regular);
-}
-
-th {
+  }
+  
+  th {
     background-color: var(--primary-color);
     color: white;
     font-family: var(--font-family-bold);
-}
-
-/* Mobil (0–599px)   */
-@media (max-width: 599px) {
+  }
+  
+  /* ========== RESPONSIVE TABLE ========== */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tr {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      padding: 10px;
+      background-color: white;
+    }
+  
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      flex: 1;
+      color: var(--primary-color);
+    }
+  
+    td:last-child {
+      border-bottom: none;
+    }
+  
+    /* === Fikser knappene i mobile visning === */
+    .medicine__edit,
+    .medicine__delete {
+      width: 48%;
+      display: inline-block;
+      margin: 5px 1%;
+      border-radius: var(--border-radius);
+    }
+  }
+  
+  @media (max-width: 599px) {
     h1 {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     input, button {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     form {
-        padding: 15px;
+      padding: 15px;
     }
-
-    th, td {
-        font-size: 14px;
+  
+    td {
+      font-size: 14px;
     }
-}
-
-
-/* Nettbrett (600–1023px) */
-@media (min-width: 600px) and (max-width: 1023px) {
+  }
+  
+  @media (min-width: 600px) and (max-width: 1023px) {
     h1 {
-        font-size: 22px;
+      font-size: 22px;
     }
-
+  
     input, button {
-        font-size: 15px;
+      font-size: 15px;
     }
-
+  
     form {
-        padding: 18px;
+      padding: 18px;
     }
-
-    th, td {
-        font-size: 15px;
+  
+    td {
+      font-size: 15px;
     }
-}
-
-
-/* PC (1024px og større)  */
-@media (min-width: 1024px) {
+  }
+  
+  @media (min-width: 1024px) {
     h1 {
-        font-size: var(--font-size-title);
+      font-size: var(--font-size-title);
     }
-
+  
     input, button {
-        font-size: var(--font-size-question);
+      font-size: var(--font-size-question);
     }
-
-    th, td {
-        font-size: var(--font-size-base);
+  
+    td {
+      font-size: var(--font-size-base);
     }
-}
+  }
+  
