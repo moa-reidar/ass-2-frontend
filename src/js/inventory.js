@@ -1,5 +1,4 @@
-// Inventory.js
-import { Medicine } from './Medicine.js';
+import { PrescriptionMedicine } from './prescriptionMedicine.js';
 
 export class Inventory {
     constructor() {
@@ -7,7 +6,7 @@ export class Inventory {
     }
 
     addMedicine(productName, manufacturer, expirationDate, quantity) {
-        const newMedicine = new Medicine(productName, manufacturer, expirationDate, quantity);
+        const newMedicine = new PrescriptionMedicine(productName, manufacturer, expirationDate, quantity);
         this.medicines.push(newMedicine);
         this.updateLocalStorage();
     }
