@@ -44,9 +44,13 @@ function createTableRow(medicine) {
   deleteButton.setAttribute('data-id', medicine.productId);
 
   deleteButton.addEventListener('click', () => {
-    inventory.deleteMedicine(medicine.productId);
-    renderTable();
+    const bekreft = confirm("Er du sikker på at du vil slette denne medisinen?");
+    if (bekreft) {
+      inventory.deleteMedicine(medicine.productId);
+      renderTable();
+    }
   });
+  
 
   actionCell.appendChild(editButton);
   actionCell.appendChild(deleteButton);
