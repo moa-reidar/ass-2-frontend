@@ -30,10 +30,11 @@ function createTableRow(medicine) {
     // Fyll skjemaet med eksisterende data
     document.getElementById('productName').value = medicine.productName;
     document.getElementById('manufacturer').value = medicine.manufacturer;
-    document.getElementById('expirationDate').value = medicine.expiraionDate;
+    document.getElementById('expirationDate').value = medicine.expirationDate;
     document.getElementById('quantity').value = medicine.quantity;
 
-  
+    // Merk skjemaet med ID-en som redigeres
+    document.getElementById('medicine-form').setAttribute('data-edit-id', medicine.productId);
   });
 
   // Slett-knapp
@@ -90,6 +91,7 @@ document.getElementById('medicine-form').addEventListener('submit', (event) => {
       expirationDate: expiration,
       quantity: quantity
     });
+    form.removeAttribute('data-edit-id');
   } else {
     // Legg til ny medisin
     inventory.addMedicine(name, manufacturer, expiration, quantity);
