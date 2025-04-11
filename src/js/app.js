@@ -27,6 +27,8 @@ function createTableRow(medicine) {
   editButton.setAttribute('data-id', medicine.productId);
 
   editButton.addEventListener('click', () => {
+    alert("Du er nå i redigeringsmodus for denne medisinen.");
+
     // Fyll skjemaet med eksisterende data
     document.getElementById('productName').value = medicine.productName;
     document.getElementById('manufacturer').value = medicine.manufacturer;
