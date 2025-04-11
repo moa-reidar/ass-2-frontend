@@ -78,3 +78,57 @@ th {
     font-family: var(--font-family-bold);
 }
 
+/* Mobil (0–599px)   */
+@media (max-width: 599px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+}
+
+
+/* Nettbrett (600–1023px) */
+@media (min-width: 600px) and (max-width: 1023px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    input, button {
+        font-size: 15px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    th, td {
+        font-size: 15px;
+    }
+}
+
+
+/* PC (1024px og større)  */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--font-size-title);
+    }
+
+    input, button {
+        font-size: var(--font-size-question);
+    }
+
+    th, td {
+        font-size: var(--font-size-base);
+    }
+}
