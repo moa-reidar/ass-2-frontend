@@ -1,10 +1,10 @@
 # Pharmacy Inventory Management System
 
-### Project Description
+## Project Description
 
 The Pharmacy Inventory Management System is a client-side web application designed to manage medicine inventory in a pharmacy setting. It allows users to add, edit, and delete medicines using a structured and responsive interface. Data is stored in the browser's localStorage, ensuring persistence across sessions. The project emphasizes clean structure, semantic HTML, modular CSS with variables, and JavaScript with Object-Oriented Programming using ES6 classes.
 
-# Installation & Setup
+## Installation & Setup
 
 1. Clone this repository:
 
@@ -18,7 +18,7 @@ cd ass-2-frontend
 
 No external server or backend is required.
 
-# Usage Instructions
+## Usage Instructions
 
 1. Fill out the form with:
 
@@ -36,7 +36,7 @@ Quantity
 
 4. Use the Delete button to remove a record, with confirmation prompt.
 
-# Features
+## Features
 
 - Object-Oriented Programming: Uses ES6 classes, including inheritance.
 
@@ -52,7 +52,7 @@ Quantity
 
 - Dynamic Table Rendering: Adjusts structure based on viewport width.
 
-# File Structure
+## File Structure
 
 pharmacy-inventory/
 ├── index.html
@@ -75,7 +75,7 @@ pharmacy-inventory/
 │       ├── Medicine.js
 │       └── prescriptionMedicine.js
 
-# Technologies Used
+## Technologies Used
 
 - HTML
 
@@ -89,14 +89,14 @@ pharmacy-inventory/
 
 - Local Storage API
 
-# Git Commit Suggestions
+## Git Commit Suggestions
 
 - feat: implement medicine edit and delete with alerts
 
 - style: improve responsive design and table layout
 
 
-# .gitignore Suggestions (macOS)
+## .gitignore Suggestions (macOS)
 
 - node_modules/
 - .DS_Store
