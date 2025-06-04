@@ -1,3 +1,6 @@
+Netlify Link: https://6840827a815f3a00aa87e4ea--remarkable-peony-ed1372.netlify.app/
+Github Link: https://github.com/moa-reidar/ass-3-frontend.git
+
 # Expense Tracker App
 
 ## Project Description
