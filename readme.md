@@ -1,110 +1,46 @@
-# Pharmacy Inventory Management System
+# Expense Tracker App
 
 ## Project Description
+This is a simple and responsive Expense Tracker built with React.  
+The purpose of the project is to allow users to add, edit, delete, and filter expenses while keeping data stored locally in the browser.  
+The app is created as part of an assignment for Frontend Development.
 
-The Pharmacy Inventory Management System is a client-side web application designed to manage medicine inventory in a pharmacy setting. It allows users to add, edit, and delete medicines using a structured and responsive interface. Data is stored in the browser's localStorage, ensuring persistence across sessions. The project emphasizes clean structure, semantic HTML, modular CSS with variables, and JavaScript with Object-Oriented Programming using ES6 classes.
+## Installation
+1. Clone the repository:
+git clone https://github.com/moa-reidar/ass-3-frontend.git
 
-## Installation & Setup
-
-1. Clone this repository:
-
-git clone https://github.com/moa-reidar/ass-2-frontend.git
 
 2. Navigate to the project directory:
+cd ass-3-frontend
 
-cd ass-2-frontend
 
-3. Open the index.html file in your preferred browser.
+3. Install dependencies:
+npm install
 
-No external server or backend is required.
+
+4. Start the development server:
+npm run dev
 
 ## Usage Instructions
-
-1. Fill out the form with:
-
-Product Name
-
-Manufacturer
-
-Expiration Date (stored in ISO 8601 format)
-
-Quantity
-
-2. Click Add Medicine to save the record.
-
-3. Use the Edit button to edit existing entries (form gets populated).
-
-4. Use the Delete button to remove a record, with confirmation prompt.
+- Add new expenses by filling out the form and clicking "Save Expense".
+- Edit an existing expense by clicking "Edit" on the corresponding item.
+- Delete an expense by clicking "Delete" (with confirmation).
+- Filter expenses by month or category using the filter options.
+- Total expenses are calculated automatically.
+- All data is saved locally using LocalStorage.
 
 ## Features
+- Add, edit, and delete expenses
+- Filter expenses by month and category
+- Total expense calculation
+- Data persistence with LocalStorage
+- Responsive design for mobile, tablet, and desktop
+- Clean and structured code using functional components and React Hooks
 
-- Object-Oriented Programming: Uses ES6 classes, including inheritance.
-
-- Local Storage: Data is saved persistently in the browser.
-
-- Auto-generated Unique IDs: Each medicine gets a unique ID.
-
-- Responsive Design: Adapts to different screen sizes using media queries.
-
-- Form Validation: Ensures all fields are filled before submission.
-
-- Semantic HTML with accessibility in mind.
-
-- Dynamic Table Rendering: Adjusts structure based on viewport width.
-
-## File Structure
-
-pharmacy-inventory/
-├── index.html
-├── package.json
-├── .gitignore
-├── src
-│   ├── assets
-│   │   ├── fonts
-│   │       ├── Roboto-Regular.ttf
-│   │       ├── Roboto-Bold.ttf
-│   │       └── Oswald-VariableFont_wght.ttf
-│   │   
-│   ├── css
-│   │   ├── reset.css
-│   │   ├── style.css
-│   │   └── variables.css
-│   └── js
-│       ├── app.js
-│       ├── inventory.js
-│       ├── Medicine.js
-│       └── prescriptionMedicine.js
-
-## Technologies Used
-
-- HTML
-
-- CSS (with variables and media queries)
-
-- JavaScript (ES6)
-
-- Classes and inheritance
-
-- DOM manipulation
-
-- Local Storage API
-
-## Git Commit Suggestions
-
-- feat: implement medicine edit and delete with alerts
-
-- style: improve responsive design and table layout
-
-
-## .gitignore Suggestions (macOS)
-
-- node_modules/
-- .DS_Store
-- *.log
+## License
+This project is licensed under the MIT License.
 
 ## Contact
-
-Created by Moa Reidar GitHub: moa-reidar Feel free to reach out via email at moa.reidar@live.no
-
-
-Thanks for checking out the Pharmacy Inventory Management System!#
+- **Name:** Moa
+- **Email:** moa@live.no
+- **GitHub:** [https://github.com/moa-reidar/ass-3-frontend.git](https://github.com/moa-reidar/ass-3-frontend.git)
